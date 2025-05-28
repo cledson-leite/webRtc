@@ -1,12 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import { IntroductionPage } from './page/introduction'
+import { JoinRoomPage } from './page/join-room'
+import { RoomPage } from './page/room'
 
 export const App = () => {
     return (
-    <>
-      <h1>Hello World!!!</h1>
-    </>
+    <Router>
+      <Switch>
+        <Route path="/join-room" component={JoinRoomPage} />
+        <Route path="/room" component={RoomPage} />
+        <Route path="/" component={IntroductionPage} />
+      </Switch>
+    </Router>
   )
 }
