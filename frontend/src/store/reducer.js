@@ -3,6 +3,7 @@ import {Actions}  from "./action"
 const initialState = {
   identity: ' ',
   isRoomCreator: false,
+  isOnlyAudio: false
 }
 
 export const reducer = (state = initialState, action) => {
@@ -11,7 +12,11 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         isRoomCreator: action.payload
-
+      }
+    case Actions.SET_CONNECT_ONLY_AUDIO:
+      return {
+        ...state,
+        isOnlyAudio: action.payload
       }
     default:
       return state
