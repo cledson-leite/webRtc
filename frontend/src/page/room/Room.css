@@ -212,12 +212,13 @@
 }
 
 .participants_separator_line {
+  display: inline-block;
   width: calc(100% - 80px);
   height: 2px;
   background-color: #e5e5e5;
-  margin-left: 40px;
+  /* margin-left: 40px;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 5px; */
 }
 
 .participants_section_container {
